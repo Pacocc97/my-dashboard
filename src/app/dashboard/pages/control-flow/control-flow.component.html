@@ -1,0 +1,52 @@
+<app-title title="Control FLow" withShadow />
+
+<section class="section">
+  <div class="div">
+    <h2>if: {{ showContent() }}</h2>
+    <button (click)="toggleContent()">Click aquí!</button>
+
+    @if(showContent()){
+    <p>Hola Mundo</p>
+    } @else {
+    <p>**********</p>
+    }
+  </div>
+</section>
+<section class="section">
+  <h2>{{ grade() }}</h2>
+  <div class="div">
+    @switch (grade()) { @case('A'){
+    <p>Arriba de 90</p>
+    } @case('B'){
+    <p>Arriba de 80</p>
+    } @case('C'){
+    <p>Arriba de 70</p>
+    } @default {
+
+    <p>Reprobado</p>
+    } }
+  </div>
+</section>
+<section class="section">
+  <div class="div">
+    <ul>
+      @for (framework of frameworks(); track framework; let i = $index, first =
+      $first, last = $last, even = $even, odd = $odd, count = $count ) {
+      <li>{{ i + 1 }} - {{ framework }}</li>
+      }
+    </ul>
+  </div>
+</section>
+<section class="section">
+  <div class="div">
+    <ul>
+      @for (framework of frameworks2(); track framework) {
+      <li>
+        {{ framework }}
+      </li>
+      } @empty {
+      <li>No hay frameworks agregados</li>
+      }
+    </ul>
+  </div>
+</section>

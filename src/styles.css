@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --font-family: "Inter", sans-serif;
+  --font-family-var: "Inter var", sans-serif;
+  --text-color-slate: #829ab1;
+  --bg-color-slate: #f5f7fa;
+  --bg-color-blue: #2563eb;
+  --text-color-white: #fff;
+}

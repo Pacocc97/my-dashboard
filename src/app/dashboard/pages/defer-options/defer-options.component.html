@@ -1,0 +1,69 @@
+<app-title title="Defer Triggers" />
+
+<section>
+  <h1 class="h1">Interacciones</h1>
+  <hr />
+  @defer(on interaction){
+  <app-heavy-loaders-fast cssClass="section">
+    <span>On Interaction</span>
+  </app-heavy-loaders-fast>
+  }@placeholder {
+  <div>Click en el div</div>
+  }
+</section>
+
+<section>
+  <hr />
+  <button #btnInteraction>Click me!</button>
+  @defer(on interaction(btnInteraction)){
+  <app-heavy-loaders-fast cssClass="section">
+    <span>On Interaction Click</span>
+  </app-heavy-loaders-fast>
+  }@placeholder {
+  <div>Click en el div</div>
+  }
+</section>
+
+<section>
+  <hr />
+  @defer(on hover){
+  <app-heavy-loaders-fast cssClass="section">
+    <span>On hover</span>
+  </app-heavy-loaders-fast>
+  }@placeholder {
+  <div>Click en el div</div>
+  }
+</section>
+
+<section>
+  <hr />
+  @defer(on immediate){
+  <app-heavy-loaders-fast cssClass="section">
+    <span>On immediate</span>
+  </app-heavy-loaders-fast>
+  }@placeholder {
+  <div>Click en el div</div>
+  }
+</section>
+
+<section>
+  <hr />
+  @defer(on timer(2000)){
+  <app-heavy-loaders-fast cssClass="section">
+    <span>On Timer</span>
+  </app-heavy-loaders-fast>
+  }@placeholder {
+  <div>2 segundos</div>
+  }
+</section>
+
+<section>
+  <hr />
+  @defer(on hover; prefetch on idle){
+  <app-heavy-loaders-fast cssClass="section">
+    <span>On hover, on idle</span>
+  </app-heavy-loaders-fast>
+  }@placeholder {
+  <div>hover</div>
+  }
+</section>
